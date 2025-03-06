@@ -25,7 +25,16 @@ const Navbar = () => {
         >
           Marketplace
         </div>
-
+          <div
+          onClick={() =>
+            document
+              .getElementById("faq")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+          className="cursor-pointer font-[700] w-[156px] h-12 border-[#010205] border-[2px] rounded-full flex justify-center items-center font-[500]"
+        >
+          FAQ
+        </div>
         <div
           onClick={() =>
             document

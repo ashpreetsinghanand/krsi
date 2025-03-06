@@ -5,12 +5,12 @@ import Newsletter from "./Newsletter";
 import Collab from "./Collab";
 
 function Home() {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [hoveredSection, setHoveredSection] = useState<number | null>(null);
 
-  const [activeSection, setActiveSection] = useState(0);
-
-  const toggleSection = (index: any) => {
-    setActiveSection(activeIndex === index ? null : index);
+  const getWidth = (index: number) => {
+    if (hoveredSection === null) return "w-1/3"; // Default width when nothing is hovered
+    return hoveredSection === index ? "w-1/2" : "w-1/4"; // Expanded/contracted on hover
   };
 
   const sections = [
@@ -57,12 +57,12 @@ function Home() {
     },
   ];
 
-  const toggleFAQ = (index: any) => {
+  const toggleFAQ = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
-    <div className="px-5 ">
+    <div className="px-5 backdrop-blur-lg bg-white/30">
       <Navbar />
 
       <div className="mt-12 flex gap-x-5 relative">
@@ -94,50 +94,52 @@ function Home() {
       {/* Marketplace Section */}
       <div id="marketplace" className="mt-12">
         <div className="flex text-[40px] justify-center font-[700]">
-          World’s Largest Emerging Grain Marketplace
+          World's Largest Emerging Grain Marketplace
         </div>
         <div className="flex text-[20px] justify-center font-[400] text-[#4D4E4F] mt-6">
-          Storage, Finance and Trade on the World’s first and largest Grain
+          Storage, Finance and Trade on the World's first and largest Grain
           Marketplace
         </div>
         <img src="/dashboard.png" alt="" />
       </div>
 
       {/* storage,finance,trade info section */}
-
       <div className="flex gap-x-4 mt-12">
         {sections.map((section, index) => (
           <div
             key={index}
-            className={`relative h-[650px] cursor-pointer transition-all duration-300 ${
-              activeSection === index ? "w-1/2" : "w-1/4"
-            }`}
-            onClick={() => toggleSection(index)}
+            className={`relative h-[650px] cursor-pointer transition-all duration-300 ${getWidth(
+              index
+            )}`}
+            onMouseEnter={() => setHoveredSection(index)}
+            onMouseLeave={() => setHoveredSection(null)}
           >
             <img
               src={section.image}
               alt={section.title}
               className="w-full h-full rounded-3xl"
             />
-            {/* <div className="absolute top-4 right-4 w-12 h-12 flex items-center justify-center rounded-full border-2 border-black bg-white"> */}
-            {activeSection === index ? (
-              <div className="absolute top-4 right-4 w-[43px] h-[43px] flex items-center justify-center rounded-full bg-[#A9C46C] rounded-full">
+            {hoveredSection === index ? (
+              <div className="absolute top-4 right-4 w-[43px] h-[43px] flex items-center justify-center rounded-full bg-[#A9C46C]">
                 <img src="/forward_arrow.svg" className="" />
               </div>
             ) : (
-              <div className="absolute top-4 right-4 w-[43px] h-[43px] flex items-center justify-center rounded-full bg-white rounded-full">
+              <div className="absolute top-4 right-4 w-[43px] h-[43px] flex items-center justify-center bg-white rounded-full">
                 <img src="/forward_arrow.svg" className="-rotate-45" />
               </div>
             )}
-            {/* </div> */}
-            <div className="absolute bottom-4 left-4 right-4 bg-white p-4 shadow-md rounded-2xl transition-opacity duration-300 ${activeIndex === index ? 'opacity-100 rounded-xl' : 'opacity-0  rounded-full'}`}">
+            <div
+              className={`absolute bottom-4 left-4 right-4 bg-white p-4 shadow-md transition-opacity duration-300 ${
+                hoveredSection === index ? "rounded-2xl" : "rounded-full"
+              }`}
+            >
               <div className="text-lg font-bold flex justify-between">
                 <div>{section.title}</div>
-                {activeSection !== index && (
+                {hoveredSection !== index && (
                   <img src="/arrow_forward_ios.svg" className="" />
                 )}
               </div>
-              {activeSection === index && (
+              {hoveredSection === index && (
                 <p className="text-sm mt-2">{section.description}</p>
               )}
             </div>
@@ -147,7 +149,7 @@ function Home() {
 
       {/* faq section */}
 
-      <div className="flex mt-12">
+      <div id="faq" className="flex mt-12">
         <div className="w-1/2 px-20">
           <div className="text-[48px]">FAQs</div>
           <div className="text-[16px] text-[#4D4E4F] mt-10">
