@@ -5,12 +5,13 @@ import Newsletter from "./Newsletter";
 
 function About() {
   return (
-    <div className="px-5  backdrop-blur-lg bg-white/30">
+    <div className="">
       <Navbar />
 
-      <div className="mt-20 px-40">
-        <div className="text-center text-[20px] font-[700]">About Us</div>
-        <div className="text-[43px] font-[700] text-center">Who we are</div>
+      <div className="px-5  backdrop-blur-lg bg-white/30">
+        <div className="mt-20 px-40">
+          <div className="text-center text-[20px] font-[700]">About Us</div>
+          <div className="text-[43px] font-[700] text-center">Who we are</div>
         <div className="text-[#4D4E4F] text-[20px] mt-10">
           Krsi, World's largest emerging grain marketplace that bridges the gap
           between sellers and buyers of agro produce goods by providing complete
@@ -52,7 +53,8 @@ function About() {
 
       <Newsletter />
 
-      <Footer />
+        <Footer />
+        </div>
     </div>
   );
 }

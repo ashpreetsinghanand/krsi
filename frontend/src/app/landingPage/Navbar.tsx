@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="flex gap-x-4">
         <Link
           to="/about"
-          className="cursor-pointer font-[700] w-[156px] h-12 border-[#010205] border-[2px] rounded-full flex justify-center items-center"
+          className="cursor-pointer font-[700] w-[156px] h-12 border-[#9B9B9C] border-[2px] rounded-full flex justify-center items-center"
         >
           About Us
         </Link>
@@ -21,7 +21,7 @@ const Navbar = () => {
               .getElementById("marketplace")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="cursor-pointer font-[700] w-[156px] h-12 border-[#010205] border-[2px] rounded-full flex justify-center items-center font-[500]"
+          className="cursor-pointer font-[700] w-[156px] h-12 border-[#9B9B9C] border-[2px] rounded-full flex justify-center items-center font-[500]"
         >
           Features
         </div>
@@ -31,7 +31,7 @@ const Navbar = () => {
               .getElementById("faq")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="cursor-pointer font-[700] w-[156px] h-12 border-[#010205] border-[2px] rounded-full flex justify-center items-center font-[500]"
+          className="cursor-pointer font-[700] w-[156px] h-12 border-[#9B9B9C] border-[2px] rounded-full flex justify-center items-center font-[500]"
         >
           FAQ
         </div>
@@ -41,7 +41,7 @@ const Navbar = () => {
               .getElementById("contact")
               ?.scrollIntoView({ behavior: "smooth" })
           }
-          className="cursor-pointer font-[700] w-[156px] h-12 border-[#010205] border-[2px] rounded-full flex justify-center items-center font-[500]"
+          className="cursor-pointer font-[700] w-[156px] h-12 border-[#9B9B9C] border-[2px] rounded-full flex justify-center items-center font-[500]"
         >
           Contact Us
         </div>

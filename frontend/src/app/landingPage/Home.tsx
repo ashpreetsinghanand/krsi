@@ -8,10 +8,6 @@ function Home() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [hoveredSection, setHoveredSection] = useState<number | null>(null);
 
-  const getWidth = (index: number) => {
-    if (hoveredSection === null) return "w-1/3"; // Default width when nothing is hovered
-    return hoveredSection === index ? "w-1/2" : "w-1/4"; // Expanded/contracted on hover
-  };
 
   const sections = [
     {
