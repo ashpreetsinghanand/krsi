@@ -5,7 +5,7 @@ import Newsletter from "./Newsletter";
 
 function Feature() {
   return (
-    <div className="bg-[url('/Background_Noise.png')] bg-cover bg-center font-sans">
+    <div className="bg-[url('/Background_Noise.png')] bg-cover bg-center font-sans-serif">
       <Navbar />
       <div className="px-5 font-sans ">
         <p className="text-[20px] font-[500] text-[#9B9B9C] text-center pt-[120px]">

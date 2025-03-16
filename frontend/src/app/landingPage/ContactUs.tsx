@@ -6,7 +6,7 @@ import Footer from './Footer';
 
 function ContactUs() {
   return (
-    <div className="bg-[url('/Background_Noise.png')] bg-cover bg-center">
+    <div className="bg-[url('/Background_Noise.png')] bg-cover bg-center font-sans-serif">
       <Navbar />
       <div className="px-5">
         <div>
@@ -21,11 +21,27 @@ function ContactUs() {
             Join Community{" "}
           </p>
           <div className="mt-12 flex justify-center items-center gap-x-12">
-            <img className='w-[51px] cursor-pointer' src="/linkedinLogo.png" alt="" />
-            <img className='w-[54px] cursor-pointer' src="/XLogo.png" alt="" />
-            <img className='w-[61px] cursor-pointer' src="/TelegramLogo.png" alt="" />
-            <img className='w-[67px] cursor-pointer' src="/DiscordLogo.png" alt="" />
-            <img className='w-[89px] cursor-pointer' src="/MediumLogo.png" alt="" />
+            <img
+              className="w-[51px] cursor-pointer"
+              src="/linkedinLogo.png"
+              alt=""
+            />
+            <img className="w-[54px] cursor-pointer" src="/XLogo.png" alt="" />
+            <img
+              className="w-[61px] cursor-pointer"
+              src="/TelegramLogo.png"
+              alt=""
+            />
+            <img
+              className="w-[67px] cursor-pointer"
+              src="/DiscordLogo.png"
+              alt=""
+            />
+            <img
+              className="w-[89px] cursor-pointer"
+              src="/MediumLogo.png"
+              alt=""
+            />
           </div>
         </div>
         <Collab />

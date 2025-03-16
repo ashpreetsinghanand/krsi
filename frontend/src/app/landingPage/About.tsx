@@ -5,7 +5,7 @@ import Newsletter from "./Newsletter";
 
 function About() {
   return (
-    <div className="bg-[url('/Background_Noise.png')] bg-cover bg-center">
+    <div className="bg-[url('/Background_Noise.png')] bg-cover bg-center font-sans-serif">
       <Navbar />
 
       <div className="px-5  backdrop-blur-lg bg-white/30">

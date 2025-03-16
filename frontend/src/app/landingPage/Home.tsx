@@ -33,7 +33,7 @@ function Home() {
 
 
   return (
-    <div className="bg-[url('/Background_Noise.png')] bg-cover bg-center">
+    <div className="bg-[url('/Background_Noise.png')] bg-cover bg-center font-sans-serif">
       <Navbar />
 
       <div className=" px-5">

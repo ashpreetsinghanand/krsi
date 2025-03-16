@@ -35,7 +35,7 @@ const Faq = () => {
     };
     
   return (
-    <div className="bg-[url('/Background_Noise.png')] bg-cover bg-center font-sans">
+    <div className="bg-[url('/Background_Noise.png')] bg-cover bg-center font-sans-serif">
       <Navbar />
       <div className="px-5 mt-[100px] w-full">
         {/* faq section */}
